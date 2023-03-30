@@ -1,9 +1,13 @@
 import 'package:get/get.dart';
 
+import '../modules/create_workspace/bindings/create_workspace_binding.dart';
+import '../modules/create_workspace/views/create_workspace_view.dart';
 import '../modules/document/bindings/document_binding.dart';
 import '../modules/document/views/document_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/login/bindings/login_binding.dart';
+import '../modules/login/views/login_view.dart';
 import '../modules/navigator_bar/bindings/navigator_bar_binding.dart';
 import '../modules/navigator_bar/views/navigator_bar_view.dart';
 import '../modules/notification/bindings/notification_binding.dart';
@@ -59,6 +63,16 @@ class AppPages {
       name: _Paths.NOTIFICATION,
       page: () => const NotificationView(),
       binding: NotificationBinding(),
+    ),
+    GetPage(
+      name: _Paths.LOGIN,
+      page: () => const LoginView(),
+      binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.CREATE_WORKSPACE,
+      page: () => const CreateWorkspaceView(),
+      binding: CreateWorkspaceBinding(),
     ),
   ];
 }

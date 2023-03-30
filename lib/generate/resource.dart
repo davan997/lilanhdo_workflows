@@ -31,6 +31,10 @@ class R {
   /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_check.svg)
   static const String ASSETS_ICONS_IC_CHECK_SVG = 'assets/icons/ic_check.svg';
 
+  /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_close_circle.svg)
+  static const String ASSETS_ICONS_IC_CLOSE_CIRCLE_SVG =
+      'assets/icons/ic_close_circle.svg';
+
   /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_document.svg)
   static const String ASSETS_ICONS_IC_DOCUMENT_SVG =
       'assets/icons/ic_document.svg';
@@ -48,6 +52,13 @@ class R {
 
   /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_gg.svg)
   static const String ASSETS_ICONS_IC_GG_SVG = 'assets/icons/ic_gg.svg';
+
+  /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_group.svg)
+  static const String ASSETS_ICONS_IC_GROUP_SVG = 'assets/icons/ic_group.svg';
+
+  /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_haft_polygon_left.svg)
+  static const String ASSETS_ICONS_IC_HAFT_POLYGON_LEFT_SVG =
+      'assets/icons/ic_haft_polygon_left.svg';
 
   /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_half_polygon_right.svg)
   static const String ASSETS_ICONS_IC_HALF_POLYGON_RIGHT_SVG =
@@ -77,6 +88,26 @@ class R {
   /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_search_picked.svg)
   static const String ASSETS_ICONS_IC_SEARCH_PICKED_SVG =
       'assets/icons/ic_search_picked.svg';
+
+  /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_unknown.svg)
+  static const String ASSETS_ICONS_IC_UNKNOWN_SVG =
+      'assets/icons/ic_unknown.svg';
+
+  /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_unvisible.svg)
+  static const String ASSETS_ICONS_IC_UNVISIBLE_SVG =
+      'assets/icons/ic_unvisible.svg';
+
+  /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_visible.svg)
+  static const String ASSETS_ICONS_IC_VISIBLE_SVG =
+      'assets/icons/ic_visible.svg';
+
+  /// ![preview](file://C:\test\lilanhdo_workflows\assets\images\avatar_default.png)
+  static const String ASSETS_IMAGES_AVATAR_DEFAULT_PNG =
+      'assets/images/avatar_default.png';
+
+  /// ![preview](file://C:\test\lilanhdo_workflows\assets\images\avatar_default_test.png)
+  static const String ASSETS_IMAGES_AVATAR_DEFAULT_TEST_PNG =
+      'assets/images/avatar_default_test.png';
 
   /// ![preview](file://C:\test\lilanhdo_workflows\assets\images\human_1.png)
   static const String ASSETS_IMAGES_HUMAN_1_PNG = 'assets/images/human_1.png';

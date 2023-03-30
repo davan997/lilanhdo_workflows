@@ -11,6 +11,8 @@ abstract class Routes {
   static const DOCUMENT = _Paths.DOCUMENT;
   static const SEARCH = _Paths.SEARCH;
   static const NOTIFICATION = _Paths.NOTIFICATION;
+  static const LOGIN = _Paths.LOGIN;
+  static const CREATE_WORKSPACE = _Paths.CREATE_WORKSPACE;
 }
 
 abstract class _Paths {
@@ -22,4 +24,6 @@ abstract class _Paths {
   static const DOCUMENT = '/document';
   static const SEARCH = '/search';
   static const NOTIFICATION = '/notification';
+  static const LOGIN = '/login';
+  static const CREATE_WORKSPACE = '/create-workspace';
 }

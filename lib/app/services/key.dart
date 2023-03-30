@@ -2,5 +2,5 @@
 
 class StorageKey {
   StorageKey._();
-  static String READ_SPLASH = 'read_splash';
+  static String LOG_IN = 'log_in';
 }

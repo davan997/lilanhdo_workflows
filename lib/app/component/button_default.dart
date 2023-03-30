@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
+import 'package:lilanhdo_workflows/app/utils/format.dart';
 
 class ButtonDefault extends StatelessWidget {
   final Function()? onPressed;
@@ -24,16 +25,16 @@ class ButtonDefault extends StatelessWidget {
             onPressed: onPressed,
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.primary,
-              minimumSize: Size(Get.width, 48),
+              minimumSize: Size(Get.width, getHeight(48)),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(getBorderRadius(24)),
               ),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (icon != null) SvgPicture.asset(icon!),
-                if (icon != null && title != null) const SizedBox(width: 12),
+                if (icon != null && title != null) SizedBox(width: getWidth(12)),
                 if (title != null) Text(title!, style: StyleText.interBold),
               ],
             ),
@@ -41,17 +42,17 @@ class ButtonDefault extends StatelessWidget {
         : OutlinedButton(
             onPressed: onPressed,
             style: OutlinedButton.styleFrom(
-              minimumSize: Size(Get.width, 48),
+              minimumSize: Size(Get.width, getHeight(48)),
               side: BorderSide(color: AppColors.border),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(24),
+                borderRadius: BorderRadius.circular(getBorderRadius(24)),
               ),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (icon != null) SvgPicture.asset(icon!),
-                if (icon != null && title != null) const SizedBox(width: 12),
+                if (icon != null && title != null) SizedBox(width: getWidth(12)),
                 if (title != null) Text(title!, style: StyleText.interBold),
               ],
             ),

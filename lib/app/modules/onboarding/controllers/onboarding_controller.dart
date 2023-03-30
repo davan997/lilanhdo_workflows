@@ -3,7 +3,6 @@ import 'package:lilanhdo_workflows/generate/resource.dart';
 
 class OnboardingController extends GetxController {
   final currentIndex = 0.obs;
-  final changeView = false.obs;
   final images = [
     {
       'image': R.ASSETS_IMAGES_ONBOADING_1_PNG,
@@ -22,7 +21,6 @@ class OnboardingController extends GetxController {
   @override
   void onClose() {
     super.onClose();
-    changeView.close();
     currentIndex.close();
   }
 }
