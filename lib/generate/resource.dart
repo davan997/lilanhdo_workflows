@@ -31,6 +31,10 @@ class R {
   /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_check.svg)
   static const String ASSETS_ICONS_IC_CHECK_SVG = 'assets/icons/ic_check.svg';
 
+  /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_circle_wrap.svg)
+  static const String ASSETS_ICONS_IC_CIRCLE_WRAP_SVG =
+      'assets/icons/ic_circle_wrap.svg';
+
   /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_close_circle.svg)
   static const String ASSETS_ICONS_IC_CLOSE_CIRCLE_SVG =
       'assets/icons/ic_close_circle.svg';
@@ -66,6 +70,10 @@ class R {
 
   /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_mail.svg)
   static const String ASSETS_ICONS_IC_MAIL_SVG = 'assets/icons/ic_mail.svg';
+
+  /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_multi_user.svg)
+  static const String ASSETS_ICONS_IC_MULTI_USER_SVG =
+      'assets/icons/ic_multi_user.svg';
 
   /// ![preview](file://C:\test\lilanhdo_workflows\assets\icons\ic_name_tag.svg)
   static const String ASSETS_ICONS_IC_NAME_TAG_SVG =

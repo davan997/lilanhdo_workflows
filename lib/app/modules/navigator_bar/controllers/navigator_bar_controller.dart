@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:lilanhdo_workflows/app/modules/document/views/document_view.dart';
-import 'package:lilanhdo_workflows/app/modules/home/views/home_view.dart';
+import 'package:lilanhdo_workflows/app/modules/home_all/home/views/home_view.dart';
 import 'package:lilanhdo_workflows/app/modules/notification/views/notification_view.dart';
 import 'package:lilanhdo_workflows/app/modules/search/views/search_view.dart';
 import 'package:lilanhdo_workflows/generate/resource.dart';

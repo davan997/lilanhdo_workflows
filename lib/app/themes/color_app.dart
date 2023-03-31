@@ -8,6 +8,7 @@ class AppColors {
   static Color border = const Color(0xff494C54);
   static Color deActive = const Color(0xff5E6272);
   static Color deActiveDark = const Color(0xff3A3D46);
+  static Color lightModeActive = const Color(0xff200745);
   static Color colorFul1 = const Color(0xffA06AF9);
   static Color colorFul2 = const Color(0xffFBA3FF);
   static Color colorFul3 = const Color(0xff8E96FF);
@@ -18,7 +19,7 @@ class AppColors {
 class AppGradient {
   const AppGradient._();
   static RadialGradient gradient_1 = const RadialGradient(
-    radius: 1.2,
+    radius: 1.5,
     center: Alignment(0.6, 0.7),
     stops: [0, 0.3889, 0.674, 1],
     colors: [

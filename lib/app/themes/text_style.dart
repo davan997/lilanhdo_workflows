@@ -65,6 +65,13 @@ class StyleText {
     color: Colors.white,
   );
 
+  static TextStyle poppins36w600 = GoogleFonts.poppins(
+    fontSize: 36,
+    fontWeight: FontWeight.w600,
+    height: 1.2,
+    color: Colors.white,
+  );
+
   static TextStyle poppins40w600 = GoogleFonts.poppins(
     fontSize: 40,
     fontWeight: FontWeight.w600,
