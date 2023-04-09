@@ -21,6 +21,7 @@ class CreateWorkspaceView extends GetView<CreateWorkspaceController> {
       body: Column(
         children: [
           defaultAppBar(
+            leading: true,
             title: 'New Workspace',
             actions: [
               SvgPicture.asset(
@@ -56,7 +57,9 @@ class CreateWorkspaceView extends GetView<CreateWorkspaceController> {
                 ),
               ),
               child: Obx(
-                () => controller.isChangeView.value == false ? StepOne(controller: controller) : StepTwo(controller: controller),
+                () => controller.isChangeView.value == false
+                    ? StepOne(controller: controller)
+                    : StepTwo(controller: controller),
               ),
             ),
           ),

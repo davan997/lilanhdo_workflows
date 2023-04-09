@@ -3,7 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:lilanhdo_workflows/app/component/button_default.dart';
+import 'package:lilanhdo_workflows/app/component/custom_switch.dart';
 import 'package:lilanhdo_workflows/app/modules/create_workspace/controllers/create_workspace_controller.dart';
+import 'package:lilanhdo_workflows/app/routes/app_pages.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
 import 'package:lilanhdo_workflows/app/utils/format.dart';
@@ -69,7 +71,8 @@ class StepTwo extends StatelessWidget {
                                   border: Border.all(color: Colors.black, width: 8),
                                   gradient: AppGradient.gradient_4,
                                 ),
-                                child: SvgPicture.asset(R.ASSETS_ICONS_IC_CHECK_SVG, fit: BoxFit.scaleDown, color: Colors.white),
+                                child: SvgPicture.asset(R.ASSETS_ICONS_IC_CHECK_SVG,
+                                    fit: BoxFit.scaleDown, color: Colors.white),
                               ),
                             ),
                           if (controller.currentPlan.value == index)
@@ -91,7 +94,9 @@ class StepTwo extends StatelessWidget {
                             child: Text(
                               d['content']!,
                               style: StyleText.inter13.copyWith(
-                                color: controller.currentPlan.value == index ? AppColors.lightModeActive : AppColors.colorFul2,
+                                color: controller.currentPlan.value == index
+                                    ? AppColors.lightModeActive
+                                    : AppColors.colorFul2,
                                 fontWeight: controller.currentPlan.value != index ? FontWeight.bold : null,
                               ),
                             ),
@@ -144,32 +149,7 @@ class StepTwo extends StatelessWidget {
                     SizedBox(width: getWidth(16)),
                     Text(d['title'], style: StyleText.inter16w600),
                     const Spacer(),
-                    Obx(
-                      () => Container(
-                        height: getHeight(24),
-                        width: getWidth(48),
-                        padding: EdgeInsets.symmetric(horizontal: getWidth(2), vertical: getHeight(2)),
-                        decoration: BoxDecoration(
-                          color: d['switch'].value == false ? AppColors.background2 : AppColors.primary,
-                          borderRadius: BorderRadius.circular(getBorderRadius(200)),
-                        ),
-                        child: Switch(
-                          value: d['switch'].value,
-                          overlayColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
-                            return Colors.transparent;
-                          }),
-                          trackColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
-                            return Colors.transparent;
-                          }),
-                          thumbColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
-                            return d['switch'].value ? Colors.white : const Color(0xff4D5362);
-                          }),
-                          onChanged: (l) {
-                            d['switch'].value = !d['switch'].value;
-                          },
-                        ),
-                      ),
-                    ),
+                    CustomSwitch(value: d['switch']),
                   ],
                 ),
               );
@@ -191,7 +171,9 @@ class StepTwo extends StatelessWidget {
             SizedBox(width: getWidth(131)),
             Expanded(
               child: ButtonDefault(
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(Routes.NAVIGATOR_BAR);
+                },
                 title: 'Done',
               ),
             ),

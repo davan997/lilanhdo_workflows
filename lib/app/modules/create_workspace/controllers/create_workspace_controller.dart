@@ -20,12 +20,12 @@ class CreateWorkspaceController extends GetxController {
     {
       'icon': R.ASSETS_ICONS_IC_MULTI_USER_SVG,
       'title': 'Multiple Assignees',
-      'switch': false.obs,
+      'switch': false,
     },
     {
       'icon': R.ASSETS_ICONS_IC_CIRCLE_WRAP_SVG,
       'title': 'Custom Labels',
-      'switch': false.obs,
+      'switch': false,
     },
   ];
   final lTheme = <dynamic>[

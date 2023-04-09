@@ -33,14 +33,15 @@ Widget defaultAppBar({bool leading = false, Function()? onTap, String? title, Li
               child: SvgPicture.asset(R.ASSETS_ICONS_IC_ARROW_LEFT_SVG, fit: BoxFit.scaleDown),
             ),
           ),
-        Expanded(
-          child: Text(
-            title ?? '',
-            style: StyleText.poppins18w600,
-            textAlign: TextAlign.center,
+        if (title != null)
+          Expanded(
+            child: Text(
+              title,
+              style: StyleText.poppins18w600,
+              textAlign: TextAlign.center,
+            ),
           ),
-        ),
-        Row(children: actions ?? []),
+        if (actions != null) leading == true ? Row(children: actions) : Expanded(child: Row(children: actions)),
       ],
     ),
   );

@@ -11,6 +11,7 @@ class NavigatorBarView extends GetView<NavigatorBarController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.background,
       body: Obx(
         () => controller.pages[controller.currentIndex.value],
       ),
@@ -46,7 +47,7 @@ class NavigatorBarView extends GetView<NavigatorBarController> {
                                 ),
                                 child: SvgPicture.asset(d['icon']!),
                               ),
-                        const SizedBox(height: 22),
+                        const Spacer(),
                         if (controller.currentIndex.value == index && controller.currentIndex.value != 2)
                           SvgPicture.asset(R.ASSETS_ICONS_IC_BOTTOM_NAVIGATOR_BAR_SVG),
                       ],
