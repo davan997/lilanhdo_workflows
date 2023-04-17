@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
-import 'package:lilanhdo_workflows/app/utils/format.dart';
 
 class CustomSwitch extends StatefulWidget {
-  bool value;
-  CustomSwitch({
-    required this.value,
+  final Rx<bool> valuer;
+  final bool? showBorder;
+  final Function(bool)? onChanged;
+  const CustomSwitch({
+    required this.valuer,
+    this.showBorder = false,
     super.key,
+    required this.onChanged,
   });
 
   @override
@@ -17,15 +21,20 @@ class _CustomSwitchState extends State<CustomSwitch> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getHeight(24),
-      width: getWidth(48),
-      padding: EdgeInsets.symmetric(horizontal: getWidth(2), vertical: getHeight(2)),
+      height: 24,
+      width: 44,
+      padding: const EdgeInsets.all(2),
       decoration: BoxDecoration(
-        color: widget.value == false ? AppColors.background2 : AppColors.primary,
-        borderRadius: BorderRadius.circular(getBorderRadius(200)),
+        color: widget.valuer.value == false ? AppColors.background2 : AppColors.primary,
+        borderRadius: BorderRadius.circular(200),
+        border: widget.showBorder!
+            ? Border.all(
+                color: widget.valuer.value ? Colors.transparent : Colors.white.withOpacity(0.1),
+              )
+            : null,
       ),
       child: Switch(
-        value: widget.value,
+        value: widget.valuer.value,
         overlayColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
           return Colors.transparent;
         }),
@@ -33,12 +42,14 @@ class _CustomSwitchState extends State<CustomSwitch> {
           return Colors.transparent;
         }),
         thumbColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
-          return widget.value ? Colors.white : const Color(0xff4D5362);
+          return widget.valuer.value ? Colors.white : const Color(0xff4D5362);
         }),
         onChanged: (l) {
-          setState(() {
-            widget.value = !widget.value;
-          });
+          setState(
+            () {
+              widget.onChanged!(l);
+            },
+          );
         },
       ),
     );

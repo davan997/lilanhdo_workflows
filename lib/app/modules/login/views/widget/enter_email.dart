@@ -6,7 +6,6 @@ import 'package:lilanhdo_workflows/app/modules/login/controllers/login_controlle
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/style_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
-import 'package:lilanhdo_workflows/app/utils/format.dart';
 import 'package:lilanhdo_workflows/generate/resource.dart';
 
 class EnterEmail extends StatelessWidget {
@@ -23,7 +22,7 @@ class EnterEmail extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Padding(
-          padding: EdgeInsets.only(left: getWidth(40)),
+          padding: const EdgeInsets.only(left: 40),
           child: Row(
             children: [
               Text(
@@ -33,15 +32,15 @@ class EnterEmail extends StatelessWidget {
               const Spacer(),
               SvgPicture.asset(
                 R.ASSETS_ICONS_IC_HAFT_POLYGON_LEFT_SVG,
-                height: getHeight(93),
-                width: getWidth(93),
+                height: 93,
+                width: 93,
               ),
             ],
           ),
         ),
-        SizedBox(height: getHeight(24)),
+        const SizedBox(height: 24),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: getWidth(40)),
+          padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -49,7 +48,7 @@ class EnterEmail extends StatelessWidget {
                 'your email'.toUpperCase(),
                 style: StyleText.inter10Bold.copyWith(color: AppColors.deActiveDark),
               ),
-              SizedBox(height: getHeight(8)),
+              const SizedBox(height: 8),
               TextFormField(
                 controller: controller.emailController,
                 autovalidateMode: AutovalidateMode.always,
@@ -71,7 +70,7 @@ class EnterEmail extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: getHeight(32)),
+              const SizedBox(height: 32),
               ButtonDefault(
                 onPressed: () {
                   controller.changeView();

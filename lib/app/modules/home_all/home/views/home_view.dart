@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
+import 'package:lilanhdo_workflows/app/component/app_bar_default.dart';
 import 'package:lilanhdo_workflows/app/modules/home_all/home/controllers/home_controller.dart';
+import 'package:lilanhdo_workflows/app/modules/home_all/home/views/widget/bs_filter_home.dart';
 import 'package:lilanhdo_workflows/app/modules/home_all/home/views/widget/overview.dart';
 import 'package:lilanhdo_workflows/app/modules/home_all/home/views/widget/productivity.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
-import 'package:lilanhdo_workflows/app/themes/style_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
-import 'package:lilanhdo_workflows/app/utils/format.dart';
 import 'package:lilanhdo_workflows/generate/resource.dart';
 
 class HomeView extends StatelessWidget {
@@ -23,7 +23,8 @@ class HomeView extends StatelessWidget {
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              defaultAppBar(
+              AppBarDefault(
+                leading: false,
                 actions: [
                   Text('Dashboard', style: StyleText.poppins18w600),
                   const Spacer(),
@@ -33,12 +34,12 @@ class HomeView extends StatelessWidget {
                     children: [
                       SvgPicture.asset('assets/icons/ic_chat.svg'),
                       Positioned(
-                        top: -getHeight(5.5),
-                        right: -getWidth(5.5),
+                        top: -5.5,
+                        right: -5.5,
                         child: Container(
                           alignment: Alignment.center,
-                          height: getHeight(16),
-                          width: getWidth(16),
+                          height: 16,
+                          width: 16,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             gradient: AppGradient.gradient_8,
@@ -48,7 +49,7 @@ class HomeView extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(width: getWidth(40)),
+                  const SizedBox(width: 40),
                   Container(
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
@@ -58,9 +59,9 @@ class HomeView extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: getHeight(22)),
+              const SizedBox(height: 22),
               Padding(
-                padding: EdgeInsets.only(left: getWidth(24)),
+                padding: const EdgeInsets.only(left: 24),
                 child: Text.rich(
                   style: StyleText.poppins36w600,
                   TextSpan(
@@ -73,7 +74,7 @@ class HomeView extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: getWidth(24), vertical: getHeight(32)),
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
                 child: Row(
                   children: [
                     Row(
@@ -86,11 +87,9 @@ class HomeView extends StatelessWidget {
                             },
                             child: Obx(
                               () => Container(
-                                padding: EdgeInsets.symmetric(horizontal: getWidth(16), vertical: getHeight(4)),
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(
-                                    getBorderRadius(16),
-                                  ),
+                                  borderRadius: BorderRadius.circular(16),
                                   color: controller.currentTab.value == index ? AppColors.primary : Colors.transparent,
                                 ),
                                 child: Text(
@@ -105,7 +104,18 @@ class HomeView extends StatelessWidget {
                       ).toList(),
                     ),
                     const Spacer(),
-                    SvgPicture.asset('assets/icons/ic_filter.svg'),
+                    GestureDetector(
+                      onTap: () {
+                        showModalBottomSheet(
+                          backgroundColor: Colors.transparent,
+                          context: context,
+                          builder: (context) {
+                            return BSFilterHome(controller: controller);
+                          },
+                        );
+                      },
+                      child: SvgPicture.asset('assets/icons/ic_filter.svg'),
+                    ),
                   ],
                 ),
               ),

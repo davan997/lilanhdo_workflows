@@ -3,11 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
+import 'package:lilanhdo_workflows/app/component/app_bar_default.dart';
 import 'package:lilanhdo_workflows/app/modules/create_workspace/views/widget/step_one.dart';
 import 'package:lilanhdo_workflows/app/modules/create_workspace/views/widget/step_two.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
-import 'package:lilanhdo_workflows/app/themes/style_app.dart';
-import 'package:lilanhdo_workflows/app/utils/format.dart';
 import 'package:lilanhdo_workflows/generate/resource.dart';
 
 import '../controllers/create_workspace_controller.dart';
@@ -20,24 +19,21 @@ class CreateWorkspaceView extends GetView<CreateWorkspaceController> {
       backgroundColor: AppColors.background,
       body: Column(
         children: [
-          defaultAppBar(
+          AppBarDefault(
             leading: true,
             title: 'New Workspace',
             actions: [
               SvgPicture.asset(
                 R.ASSETS_ICONS_IC_UNKNOWN_SVG,
-                height: getHeight(48),
-                width: getWidth(48),
+                height: 48,
+                width: 48,
               ),
             ],
           ),
-          SizedBox(height: getHeight(24)),
+          const SizedBox(height: 24),
           Expanded(
             child: Container(
-              width: Get.width,
-              padding: EdgeInsets.symmetric(
-                horizontal: getWidth(24),
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 24),
               decoration: BoxDecoration(
                 color: Colors.transparent,
                 border: GradientBoxBorder(
@@ -52,8 +48,8 @@ class CreateWorkspaceView extends GetView<CreateWorkspaceController> {
                     ],
                   ),
                 ),
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(getBorderRadius(24)),
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(24),
                 ),
               ),
               child: Obx(

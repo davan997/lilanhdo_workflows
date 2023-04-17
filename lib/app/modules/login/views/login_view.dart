@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:lilanhdo_workflows/app/component/app_bar_default.dart';
 import 'package:lilanhdo_workflows/app/modules/login/controllers/login_controller.dart';
 import 'package:lilanhdo_workflows/app/modules/login/views/widget/enter_email.dart';
 import 'package:lilanhdo_workflows/app/modules/login/views/widget/log_in.dart';
 import 'package:lilanhdo_workflows/app/modules/login/views/widget/sign_up.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
-import 'package:lilanhdo_workflows/app/themes/style_app.dart';
-import 'package:lilanhdo_workflows/app/utils/format.dart';
 
 class LoginView extends GetView<LoginController> {
   const LoginView({Key? key}) : super(key: key);
@@ -22,7 +21,8 @@ class LoginView extends GetView<LoginController> {
         },
         child: Column(
           children: [
-            defaultAppBar(
+            AppBarDefault(
+              leading: true,
               onTap: () {
                 if (controller.currentView.value != 0) {
                   controller.currentView.value = 0;
@@ -31,7 +31,7 @@ class LoginView extends GetView<LoginController> {
                 }
               },
             ),
-            SizedBox(height: getHeight(32)),
+            const SizedBox(height: 32),
             Obx(
               () => controller.currentView.value == 0
                   ? EnterEmail(controller: controller)

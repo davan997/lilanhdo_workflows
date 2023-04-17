@@ -7,7 +7,6 @@ import 'package:lilanhdo_workflows/app/routes/app_pages.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/style_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
-import 'package:lilanhdo_workflows/app/utils/format.dart';
 import 'package:lilanhdo_workflows/generate/resource.dart';
 
 class LogIn extends StatelessWidget {
@@ -20,14 +19,14 @@ class LogIn extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       shrinkWrap: true,
-      padding: EdgeInsets.symmetric(horizontal: getWidth(48)),
+      padding: const EdgeInsets.symmetric(horizontal: 48),
       physics: const NeverScrollableScrollPhysics(),
       children: [
         Text(
           'Login',
           style: StyleText.poppins32w600,
         ),
-        SizedBox(height: getHeight(11)),
+        const SizedBox(height: 11),
         Text.rich(
           overflow: TextOverflow.ellipsis,
           TextSpan(
@@ -47,12 +46,12 @@ class LogIn extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: getHeight(35)),
+        const SizedBox(height: 35),
         Text(
           'your password'.toUpperCase(),
           style: StyleText.inter10Bold.copyWith(color: AppColors.deActiveDark),
         ),
-        SizedBox(height: getHeight(8)),
+        const SizedBox(height: 8),
         Obx(
           () => TextFormField(
             obscureText: controller.isShowPassword.value,
@@ -74,7 +73,7 @@ class LogIn extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: getHeight(23)),
+        const SizedBox(height: 23),
         ButtonDefault(
           onPressed: () {
             Get.offAllNamed(Routes.CREATE_WORKSPACE);

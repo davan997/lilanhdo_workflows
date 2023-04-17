@@ -8,7 +8,6 @@ import 'package:lilanhdo_workflows/app/modules/create_workspace/controllers/crea
 import 'package:lilanhdo_workflows/app/routes/app_pages.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
-import 'package:lilanhdo_workflows/app/utils/format.dart';
 import 'package:lilanhdo_workflows/generate/resource.dart';
 
 class StepTwo extends StatelessWidget {
@@ -21,17 +20,17 @@ class StepTwo extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: getHeight(24)),
+        const SizedBox(height: 24),
         Text(
           'Choose Plan',
           style: StyleText.poppins24w600,
         ),
-        SizedBox(height: getHeight(8)),
+        const SizedBox(height: 8),
         Text(
           'Unlock all features with Premium Plan',
           style: StyleText.inter12w500,
         ),
-        SizedBox(height: getHeight(29)),
+        const SizedBox(height: 29),
         Row(
           children: controller.lPlan.map(
             (d) {
@@ -43,13 +42,13 @@ class StepTwo extends StatelessWidget {
                   },
                   child: Obx(
                     () => Container(
-                      height: getHeight(195),
+                      height: 195,
                       margin: EdgeInsets.only(
-                        right: index == 0 ? getWidth(10) : 0,
-                        left: index == controller.lPlan.length - 1 ? getWidth(10) : 0,
+                        right: index == 0 ? 10 : 0,
+                        left: index == controller.lPlan.length - 1 ? 10 : 0,
                       ),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(getBorderRadius(20)),
+                        borderRadius: BorderRadius.circular(20),
                         border: GradientBoxBorder(
                           width: 4,
                           gradient: AppGradient.gradient_1,
@@ -61,27 +60,30 @@ class StepTwo extends StatelessWidget {
                         children: [
                           if (controller.currentPlan.value == index)
                             Positioned(
-                              left: getWidth(2),
+                              left: 2,
                               child: Container(
-                                height: getHeight(40),
-                                width: getWidth(40),
-                                padding: EdgeInsets.symmetric(horizontal: getWidth(6), vertical: getHeight(6)),
+                                height: 40,
+                                width: 40,
+                                padding: const EdgeInsets.all(6),
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   border: Border.all(color: Colors.black, width: 8),
                                   gradient: AppGradient.gradient_4,
                                 ),
-                                child: SvgPicture.asset(R.ASSETS_ICONS_IC_CHECK_SVG,
-                                    fit: BoxFit.scaleDown, color: Colors.white),
+                                child: SvgPicture.asset(
+                                  R.ASSETS_ICONS_IC_CHECK_SVG,
+                                  fit: BoxFit.scaleDown,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                           if (controller.currentPlan.value == index)
                             Positioned(
-                              top: getHeight(36),
+                              top: 36,
                               child: Text('🎉', style: StyleText.poppins36w600),
                             ),
                           Positioned(
-                            top: getHeight(98),
+                            top: 98,
                             child: Text(
                               d['title']!,
                               style: StyleText.poppins18w600.copyWith(
@@ -90,7 +92,7 @@ class StepTwo extends StatelessWidget {
                             ),
                           ),
                           Positioned(
-                            top: getHeight(130),
+                            top: 130,
                             child: Text(
                               d['content']!,
                               style: StyleText.inter13.copyWith(
@@ -110,9 +112,9 @@ class StepTwo extends StatelessWidget {
             },
           ).toList(),
         ),
-        SizedBox(height: getHeight(44)),
+        const SizedBox(height: 44),
         Text('Enable Features', style: StyleText.poppins24w600),
-        SizedBox(height: getHeight(8)),
+        const SizedBox(height: 8),
         Text.rich(
           TextSpan(
             children: [
@@ -131,13 +133,13 @@ class StepTwo extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: getHeight(25)),
+        const SizedBox(height: 25),
         Column(
           children: controller.lFeatures.map(
             (d) {
               return Container(
-                margin: EdgeInsets.only(top: getHeight(9)),
-                padding: EdgeInsets.symmetric(vertical: getHeight(15)),
+                margin: const EdgeInsets.only(top: 9),
+                padding: const EdgeInsets.symmetric(vertical: 15),
                 decoration: BoxDecoration(
                   border: Border(
                     bottom: BorderSide(color: AppColors.background2),
@@ -146,17 +148,23 @@ class StepTwo extends StatelessWidget {
                 child: Row(
                   children: [
                     SvgPicture.asset(d['icon']),
-                    SizedBox(width: getWidth(16)),
+                    const SizedBox(width: 16),
                     Text(d['title'], style: StyleText.inter16w600),
                     const Spacer(),
-                    CustomSwitch(value: d['switch']),
+                    CustomSwitch(
+                      valuer: d['switch'],
+                      showBorder: false,
+                      onChanged: (l) {
+                        d['switch'].value = !d['switch'].value;
+                      },
+                    ),
                   ],
                 ),
               );
             },
           ).toList(),
         ),
-        SizedBox(height: getHeight(50)),
+        const Spacer(),
         Row(
           children: [
             Expanded(
@@ -168,7 +176,7 @@ class StepTwo extends StatelessWidget {
                 title: 'Back',
               ),
             ),
-            SizedBox(width: getWidth(131)),
+            const SizedBox(width: 131),
             Expanded(
               child: ButtonDefault(
                 onPressed: () {
@@ -179,6 +187,7 @@ class StepTwo extends StatelessWidget {
             ),
           ],
         ),
+        const SizedBox(height: 20),
       ],
     );
   }

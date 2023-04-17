@@ -6,7 +6,6 @@ import 'package:lilanhdo_workflows/app/component/button_default.dart';
 import 'package:lilanhdo_workflows/app/routes/app_pages.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
-import 'package:lilanhdo_workflows/app/utils/format.dart';
 import 'package:lilanhdo_workflows/generate/resource.dart';
 
 import '../controllers/onboarding_controller.dart';
@@ -37,7 +36,7 @@ class OnboardingView extends GetView<OnboardingController> {
                     Image.asset(d['image']!, fit: BoxFit.fill),
                     Positioned(
                       bottom: 0,
-                      left: getWidth(40),
+                      left: 40,
                       child: Text(
                         d['content']!,
                         style: StyleText.poppins40w600,
@@ -49,19 +48,20 @@ class OnboardingView extends GetView<OnboardingController> {
             ).toList(),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: getWidth(34), vertical: getHeight(32)),
+            padding: const EdgeInsets.symmetric(horizontal: 34, vertical: 32),
             child: Obx(
               () => Row(
                 children: controller.images.map(
                   (d) {
                     final index = controller.images.indexOf(d);
                     return Container(
-                      height: getHeight(8),
-                      width: getWidth(8),
-                      margin: EdgeInsets.symmetric(horizontal: getWidth(6)),
+                      height: 8,
+                      width: 8,
+                      margin: const EdgeInsets.symmetric(horizontal: 6),
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: controller.currentIndex.value == index ? AppColors.primary : Colors.white.withOpacity(0.2),
+                        color:
+                            controller.currentIndex.value == index ? AppColors.primary : Colors.white.withOpacity(0.2),
                       ),
                     );
                   },
@@ -70,7 +70,7 @@ class OnboardingView extends GetView<OnboardingController> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: getWidth(40)),
+            padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Column(
               children: [
                 ButtonDefault(
@@ -81,7 +81,7 @@ class OnboardingView extends GetView<OnboardingController> {
                   title: 'Continue with Email',
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: getHeight(16)),
+                  padding: const EdgeInsets.symmetric(vertical: 16),
                   child: Row(
                     children: [
                       Expanded(
@@ -91,7 +91,7 @@ class OnboardingView extends GetView<OnboardingController> {
                           icon: R.ASSETS_ICONS_IC_GG_SVG,
                         ),
                       ),
-                      SizedBox(width: getWidth(16)),
+                      const SizedBox(width: 16),
                       Expanded(
                         child: ButtonDefault(
                           onPressed: () {},

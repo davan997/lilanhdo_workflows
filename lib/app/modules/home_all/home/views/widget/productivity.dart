@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lilanhdo_workflows/app/modules/home_all/home/controllers/home_controller.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
-import 'package:lilanhdo_workflows/app/utils/format.dart';
 
 class Productivity extends StatelessWidget {
   final HomeController controller;
@@ -11,16 +11,18 @@ class Productivity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: getWidth(24)),
+      padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Column(
         children: [
           Container(
-            padding: EdgeInsets.fromLTRB(getWidth(18), getHeight(20), getWidth(24), getHeight(10)),
+            padding: const EdgeInsets.fromLTRB(18, 20, 24, 10),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: AppColors.background2,
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,19 +31,16 @@ class Productivity extends StatelessWidget {
                       'Daily Goal',
                       style: StyleText.inter13w500.copyWith(color: AppColors.deActive),
                     ),
-                    SizedBox(height: getHeight(16)),
+                    const SizedBox(height: 16),
                     Row(
                       children: [
                         Container(
-                          margin: EdgeInsets.only(right: getWidth(8)),
-                          padding: EdgeInsets.symmetric(
-                            horizontal: getWidth(8),
-                            vertical: getWidth(4),
-                          ),
+                          height: 24,
+                          width: 40,
+                          margin: const EdgeInsets.only(right: 8),
+                          alignment: Alignment.center,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(
-                              getBorderRadius(100),
-                            ),
+                            borderRadius: BorderRadius.circular(100),
                             gradient: AppGradient.gradient_4,
                           ),
                           child: Text('3/5', style: StyleText.interBold),
@@ -49,21 +48,16 @@ class Productivity extends StatelessWidget {
                         Text('tasks', style: StyleText.inter16w600),
                       ],
                     ),
-                    SizedBox(height: getHeight(16)),
+                    const SizedBox(height: 16),
                     Text(
                       'You marked 3/5 tasks\nare done 🎉',
                       style: StyleText.inter13.copyWith(color: AppColors.deActive),
                     ),
-                    SizedBox(height: getHeight(16)),
+                    const SizedBox(height: 16),
                     Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: getWidth(20.5),
-                        vertical: getHeight(10),
-                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 20.5, vertical: 10),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(
-                          getBorderRadius(24),
-                        ),
+                        borderRadius: BorderRadius.circular(24),
                         color: AppColors.secondary,
                         boxShadow: const [
                           BoxShadow(
@@ -77,12 +71,39 @@ class Productivity extends StatelessWidget {
                     ),
                   ],
                 ),
+                Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    SizedBox(
+                      height: 80,
+                      width: 80,
+                      child: CircularProgressIndicator(
+                        color: AppColors.deActive,
+                        value: 1,
+                        strokeWidth: 10,
+                      ),
+                    ),
+                    Transform.rotate(
+                      angle: 1.57,
+                      child: const SizedBox(
+                        height: 80,
+                        width: 80,
+                        child: CircularProgressIndicator(
+                          color: Color(0xff86FFCA),
+                          value: 0.75,
+                          strokeWidth: 10,
+                        ),
+                      ),
+                    ),
+                    SvgPicture.asset('assets/icons/ic_symbol.svg'),
+                  ],
+                ),
               ],
             ),
           ),
-          SizedBox(height: getHeight(16)),
+          const SizedBox(height: 16),
           Container(
-            padding: EdgeInsets.only(top: getHeight(20), bottom: getHeight(20), right: getWidth(20)),
+            padding: const EdgeInsets.only(top: 20, bottom: 20, right: 20),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: AppColors.background2,
@@ -91,13 +112,13 @@ class Productivity extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: getWidth(20)),
+                  padding: const EdgeInsets.only(left: 20),
                   child: Text(
                     'Completed in the last 7 Days',
                     style: StyleText.inter13w500.copyWith(color: AppColors.deActive),
                   ),
                 ),
-                SizedBox(height: getHeight(20)),
+                const SizedBox(height: 20),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -107,12 +128,11 @@ class Productivity extends StatelessWidget {
                           return Column(
                             children: [
                               Container(
-                                width: getWidth(6),
-                                height: getHeight(57),
-                                margin: EdgeInsets.symmetric(horizontal: getWidth(16)),
-                                decoration: BoxDecoration(
-                                  color: AppColors.colorFul1,
-                                  borderRadius: const BorderRadius.vertical(
+                                width: 6,
+                                height: 57,
+                                margin: const EdgeInsets.symmetric(horizontal: 14),
+                                decoration: const BoxDecoration(
+                                  borderRadius: BorderRadius.vertical(
                                     top: Radius.circular(8),
                                     bottom: Radius.circular(2),
                                   ),
@@ -123,8 +143,23 @@ class Productivity extends StatelessWidget {
                                     LayoutBuilder(
                                       builder: (context, containers) {
                                         return Container(
-                                          width: getWidth(6),
-                                          height: containers.maxHeight * (d['quantity'] / 20),
+                                          width: 6,
+                                          height: containers.maxHeight * (d['project'] / 20),
+                                          decoration: BoxDecoration(
+                                            color: AppColors.colorFul1,
+                                            borderRadius: const BorderRadius.vertical(
+                                              top: Radius.circular(8),
+                                              bottom: Radius.circular(2),
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                    LayoutBuilder(
+                                      builder: (context, containers) {
+                                        return Container(
+                                          width: 6,
+                                          height: containers.maxHeight * (d['task'] / 20),
                                           decoration: BoxDecoration(
                                             color: AppColors.colorFul2,
                                             borderRadius: const BorderRadius.vertical(
@@ -138,7 +173,7 @@ class Productivity extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              SizedBox(height: getHeight(6)),
+                              const SizedBox(height: 6),
                               Text(
                                 d['title'],
                                 style: StyleText.inter10Bold.copyWith(color: AppColors.deActive),
@@ -148,33 +183,36 @@ class Productivity extends StatelessWidget {
                         },
                       ).toList(),
                     ),
-                    SizedBox(width: getWidth(16)),
+                    const SizedBox(width: 16),
                     Column(
                       children: controller.lQuantity.map(
                         (d) {
                           final index = controller.lQuantity.indexOf(d);
                           return Padding(
                             padding: EdgeInsets.only(
-                              top: index == 0 ? 0 : getHeight(6),
-                              bottom: index == controller.lQuantity.length - 1 ? 0 : getHeight(6),
+                              top: index == 0 ? 0 : 6,
+                              bottom: index == controller.lQuantity.length - 1 ? 0 : 6,
                             ),
-                            child: Text(d.toString(), style: StyleText.inter10Bold.copyWith(color: AppColors.deActive)),
+                            child: Text(
+                              d.toString(),
+                              style: StyleText.inter10Bold.copyWith(color: AppColors.deActive),
+                            ),
                           );
                         },
                       ).toList(),
                     ),
                   ],
                 ),
-                SizedBox(height: getHeight(20)),
+                const SizedBox(height: 20),
                 Padding(
-                  padding: EdgeInsets.only(left: getWidth(20)),
+                  padding: const EdgeInsets.only(left: 20),
                   child: Row(
                     children: [
                       Text(
                         '108 Tasks',
                         style: StyleText.interBold.copyWith(color: AppColors.colorFul2),
                       ),
-                      SizedBox(width: getWidth(24)),
+                      const SizedBox(width: 24),
                       Text(
                         '6 Projects',
                         style: StyleText.interBold.copyWith(color: AppColors.colorFul1),

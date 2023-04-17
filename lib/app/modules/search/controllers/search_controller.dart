@@ -1,23 +1,17 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SearchController extends GetxController {
-  //TODO: Implement SearchController
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
+  final currentIndex = 0.obs;
+  final lTab = ['Task', 'Mention', 'Files'];
+  final controllerSearch = TextEditingController();
+  final contentSearch = ''.obs;
+  final isFocusSearch = false.obs;
 
   @override
   void onClose() {
+    currentIndex.close();
+    contentSearch.close();
     super.onClose();
   }
-
-  void increment() => count.value++;
 }

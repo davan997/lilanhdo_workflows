@@ -7,7 +7,6 @@ import 'package:lilanhdo_workflows/app/modules/splash/controllers/splash_control
 import 'package:lilanhdo_workflows/app/routes/app_pages.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
-import 'package:lilanhdo_workflows/app/utils/format.dart';
 import 'package:lilanhdo_workflows/generate/resource.dart';
 
 class SplashView extends StatelessWidget {
@@ -29,7 +28,7 @@ class SplashView extends StatelessWidget {
                         padding: EdgeInsets.symmetric(horizontal: Get.width / 3),
                         child: Image.asset(R.ASSETS_IMAGES_LOGO_1_PNG),
                       ),
-                      SizedBox(height: getHeight(20)),
+                      const SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -64,12 +63,8 @@ class SplashView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(
-                            top: getHeight(4),
-                            bottom: getHeight(3),
-                            left: getWidth(123),
-                          ),
-                          child: SvgPicture.asset(R.ASSETS_ICONS_IC_FULL_POLYGON_SVG, height: getHeight(16), width: getWidth(16)),
+                          padding: const EdgeInsets.only(top: 4, bottom: 3, left: 123),
+                          child: SvgPicture.asset(R.ASSETS_ICONS_IC_FULL_POLYGON_SVG, height: 16, width: 16),
                         ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.end,
@@ -81,11 +76,11 @@ class SplashView extends StatelessWidget {
                                   Row(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: [
-                                      SizedBox(width: getWidth(26)),
+                                      const SizedBox(width: 26),
                                       Container(
-                                        height: getHeight(13),
-                                        width: getWidth(13),
-                                        margin: EdgeInsets.only(bottom: getHeight(8)),
+                                        height: 13,
+                                        width: 13,
+                                        margin: const EdgeInsets.only(bottom: 8),
                                         decoration: BoxDecoration(
                                           shape: BoxShape.circle,
                                           color: AppColors.colorFul1,
@@ -93,16 +88,16 @@ class SplashView extends StatelessWidget {
                                       ),
                                       const Spacer(),
                                       Container(
-                                        padding: EdgeInsets.symmetric(horizontal: getWidth(8), vertical: getHeight(8)),
+                                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                                         decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(getBorderRadius(24)),
+                                          borderRadius: BorderRadius.circular(24),
                                           color: AppColors.background2,
                                         ),
                                         child: Row(
                                           children: [
                                             Container(
-                                              height: getHeight(24),
-                                              width: getWidth(24),
+                                              height: 24,
+                                              width: 24,
                                               decoration: const BoxDecoration(
                                                 shape: BoxShape.circle,
                                                 gradient: LinearGradient(
@@ -118,31 +113,32 @@ class SplashView extends StatelessWidget {
                                                   ],
                                                 ),
                                               ),
-                                              child: SvgPicture.asset(R.ASSETS_ICONS_IC_CHECK_SVG, fit: BoxFit.scaleDown),
+                                              child:
+                                                  SvgPicture.asset(R.ASSETS_ICONS_IC_CHECK_SVG, fit: BoxFit.scaleDown),
                                             ),
-                                            SizedBox(width: getWidth(16)),
+                                            const SizedBox(width: 16),
                                             SvgPicture.asset(R.ASSETS_ICONS_IC_NAME_TAG_SVG),
-                                            SizedBox(width: getWidth(52)),
+                                            const SizedBox(width: 52),
                                           ],
                                         ),
                                       ),
-                                      SizedBox(width: getWidth(53)),
+                                      const SizedBox(width: 53),
                                     ],
                                   ),
-                                  SizedBox(height: getHeight(36)),
+                                  const SizedBox(height: 36),
                                   SizedBox(
-                                    height: getHeight(261),
-                                    width: getWidth(350),
+                                    height: 261,
+                                    width: 350,
                                     child: Stack(
                                       alignment: Alignment.topCenter,
                                       children: [
                                         Row(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
-                                            SizedBox(width: getHeight(91)),
+                                            const SizedBox(width: 91),
                                             Container(
-                                              height: getHeight(8),
-                                              width: getWidth(8),
+                                              height: 8,
+                                              width: 8,
                                               decoration: BoxDecoration(
                                                 shape: BoxShape.circle,
                                                 color: AppColors.colorFul2,
@@ -150,23 +146,23 @@ class SplashView extends StatelessWidget {
                                             ),
                                             const Spacer(),
                                             Container(
-                                              height: getHeight(64),
-                                              width: getWidth(64),
+                                              height: 64,
+                                              width: 64,
                                               decoration: BoxDecoration(
                                                 shape: BoxShape.circle,
                                                 gradient: AppGradient.gradient_1,
                                               ),
                                               child: Image.asset(R.ASSETS_IMAGES_HUMAN_1_PNG, fit: BoxFit.scaleDown),
                                             ),
-                                            SizedBox(width: getWidth(53)),
+                                            const SizedBox(width: 53),
                                           ],
                                         ),
                                         Positioned(
-                                          top: getHeight(63.5),
+                                          top: 63.5,
                                           left: 0,
                                           child: Container(
-                                            height: getHeight(80),
-                                            width: getWidth(80),
+                                            height: 80,
+                                            width: 80,
                                             decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                               gradient: AppGradient.gradient_3,
@@ -175,38 +171,39 @@ class SplashView extends StatelessWidget {
                                           ),
                                         ),
                                         Positioned(
-                                          top: getHeight(63.5),
-                                          left: getWidth(52),
+                                          top: 63.5,
+                                          left: 52,
                                           child: Container(
-                                            padding: EdgeInsets.symmetric(vertical: getHeight(8), horizontal: getWidth(8)),
+                                            padding: const EdgeInsets.all(8),
                                             decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(getBorderRadius(24)),
+                                              borderRadius: BorderRadius.circular(24),
                                               color: AppColors.background2,
                                             ),
                                             child: Row(
                                               children: [
                                                 Container(
-                                                  height: getHeight(24),
-                                                  width: getWidth(24),
+                                                  height: 24,
+                                                  width: 24,
                                                   decoration: BoxDecoration(
                                                     shape: BoxShape.circle,
                                                     gradient: AppGradient.gradient_1,
                                                   ),
-                                                  child: SvgPicture.asset(R.ASSETS_ICONS_IC_CHECK_SVG, fit: BoxFit.scaleDown),
+                                                  child: SvgPicture.asset(R.ASSETS_ICONS_IC_CHECK_SVG,
+                                                      fit: BoxFit.scaleDown),
                                                 ),
-                                                SizedBox(width: getWidth(16)),
+                                                const SizedBox(width: 16),
                                                 SvgPicture.asset(R.ASSETS_ICONS_IC_NAME_TAG_SVG),
-                                                SizedBox(width: getWidth(52)),
+                                                const SizedBox(width: 52),
                                               ],
                                             ),
                                           ),
                                         ),
                                         Positioned(
-                                          top: getHeight(121),
-                                          left: getWidth(112),
+                                          top: 121,
+                                          left: 112,
                                           child: Container(
-                                            height: getHeight(140),
-                                            width: getWidth(140),
+                                            height: 140,
+                                            width: 140,
                                             decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                               color: AppColors.colorFul4,
@@ -215,28 +212,29 @@ class SplashView extends StatelessWidget {
                                           ),
                                         ),
                                         Positioned(
-                                          top: getHeight(121),
-                                          left: getWidth(210),
+                                          top: 121,
+                                          left: 210,
                                           child: Container(
-                                            padding: EdgeInsets.symmetric(horizontal: getWidth(8), vertical: getHeight(8)),
+                                            padding: const EdgeInsets.all(8),
                                             decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(getBorderRadius(24)),
+                                              borderRadius: BorderRadius.circular(24),
                                               color: AppColors.background2,
                                             ),
                                             child: Row(
                                               children: [
                                                 Container(
-                                                  height: getHeight(24),
-                                                  width: getWidth(24),
+                                                  height: 24,
+                                                  width: 24,
                                                   decoration: BoxDecoration(
                                                     shape: BoxShape.circle,
                                                     gradient: AppGradient.gradient_1,
                                                   ),
-                                                  child: SvgPicture.asset(R.ASSETS_ICONS_IC_CHECK_SVG, fit: BoxFit.scaleDown),
+                                                  child: SvgPicture.asset(R.ASSETS_ICONS_IC_CHECK_SVG,
+                                                      fit: BoxFit.scaleDown),
                                                 ),
-                                                SizedBox(width: getWidth(16)),
+                                                const SizedBox(width: 16),
                                                 SvgPicture.asset(R.ASSETS_ICONS_IC_NAME_TAG_SVG),
-                                                SizedBox(width: getWidth(52)),
+                                                const SizedBox(width: 52),
                                               ],
                                             ),
                                           ),
@@ -249,52 +247,56 @@ class SplashView extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(height: getHeight(64)),
+                        const SizedBox(height: 64),
                         Row(
-                          crossAxisAlignment: CrossAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            SizedBox(width: getWidth(48)),
-                            Text(
-                              'Let\'s create\na space\nfor your\nworkflows.',
-                              style: StyleText.poppins40w600,
-                            ),
-                            const Spacer(),
-                            Stack(
-                              alignment: Alignment.topCenter,
-                              children: [
-                                SvgPicture.asset(
-                                  R.ASSETS_ICONS_IC_ANGEL_LEFT_SVG,
-                                  height: getHeight(197),
-                                  width: getWidth(197),
+                            const SizedBox(width: 48),
+                            Expanded(
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: FittedBox(
+                                  fit: BoxFit.contain,
+                                  child: Text(
+                                    'Let\'s create\na space\nfor your\nworkflows.',
+                                    style: StyleText.poppins40w600,
+                                  ),
                                 ),
+                              ),
+                            ),
+                            Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                SvgPicture.asset(R.ASSETS_ICONS_IC_ANGEL_LEFT_SVG, height: 197, width: 197),
                                 Positioned(
-                                  top: getHeight(90),
-                                  right: getWidth(8),
+                                  top: 90,
+                                  right: 8,
                                   child: GestureDetector(
                                     behavior: HitTestBehavior.opaque,
                                     onTap: () {
                                       Get.offAndToNamed(Routes.ONBOARDING);
                                     },
-                                    child: SvgPicture.asset(
-                                      R.ASSETS_ICONS_IC_ARROW_RIGHT_SVG,
-                                      height: getHeight(20),
-                                      width: getWidth(20),
-                                    ),
+                                    child: SvgPicture.asset(R.ASSETS_ICONS_IC_ARROW_RIGHT_SVG, height: 20, width: 20),
                                   ),
                                 ),
                               ],
                             ),
                           ],
                         ),
-                        SizedBox(height: getHeight(24)),
-                        Padding(
-                          padding: EdgeInsets.only(left: getWidth(48), right: getWidth(183)),
-                          child: ButtonDefault(
-                            onPressed: () {
-                              Get.toNamed(Routes.LOGIN);
-                            },
-                            title: 'Get Started',
-                          ),
+                        const SizedBox(height: 24),
+                        Row(
+                          children: [
+                            const SizedBox(width: 48),
+                            Expanded(
+                              child: ButtonDefault(
+                                onPressed: () {
+                                  Get.offAndToNamed(Routes.ONBOARDING);
+                                },
+                                title: 'Get Started',
+                              ),
+                            ),
+                            const Spacer(),
+                          ],
                         ),
                       ],
                     ),

@@ -13,7 +13,7 @@ class DocumentView extends GetView<DocumentController> {
         title: const Text('DocumentView'),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'DocumentView is working',
           style: TextStyle(fontSize: 20),

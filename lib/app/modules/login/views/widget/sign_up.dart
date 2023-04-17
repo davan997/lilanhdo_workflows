@@ -6,7 +6,6 @@ import 'package:lilanhdo_workflows/app/modules/login/controllers/login_controlle
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/style_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
-import 'package:lilanhdo_workflows/app/utils/format.dart';
 import 'package:lilanhdo_workflows/generate/resource.dart';
 
 class SignUp extends StatelessWidget {
@@ -19,14 +18,14 @@ class SignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       shrinkWrap: true,
-      padding: EdgeInsets.symmetric(horizontal: getWidth(48)),
+      padding: const EdgeInsets.symmetric(horizontal: 48),
       physics: const NeverScrollableScrollPhysics(),
       children: [
         Text(
           'Sign Up',
           style: StyleText.poppins32w600,
         ),
-        SizedBox(height: getHeight(11)),
+        const SizedBox(height: 11),
         Text.rich(
           overflow: TextOverflow.ellipsis,
           TextSpan(
@@ -46,12 +45,12 @@ class SignUp extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: getHeight(35)),
+        const SizedBox(height: 35),
         Text(
           'your name'.toUpperCase(),
           style: StyleText.inter10Bold.copyWith(color: AppColors.deActiveDark),
         ),
-        SizedBox(height: getHeight(8)),
+        const SizedBox(height: 8),
         TextFormField(
           autovalidateMode: AutovalidateMode.always,
           style: StyleText.inter16w600,
@@ -60,12 +59,12 @@ class SignUp extends StatelessWidget {
           },
           decoration: inputDecoration(),
         ),
-        SizedBox(height: getHeight(24)),
+        const SizedBox(height: 24),
         Text(
           'your password'.toUpperCase(),
           style: StyleText.inter10Bold.copyWith(color: AppColors.deActiveDark),
         ),
-        SizedBox(height: getHeight(8)),
+        const SizedBox(height: 8),
         Obx(
           () => TextFormField(
             obscureText: controller.isShowPassword.value,
@@ -87,7 +86,7 @@ class SignUp extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: getHeight(23)),
+        const SizedBox(height: 23),
         ButtonDefault(
           onPressed: () {},
           title: 'Sign Up',

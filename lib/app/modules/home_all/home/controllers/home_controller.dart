@@ -13,7 +13,7 @@ class HomeController extends GetxController {
       'title': 'Total Task',
       'total': '16',
       'color': AppColors.colorFul6,
-      'switch': true,
+      'switch': true.obs,
     },
     {
       'icons': 'assets/icons/ic_back_up.svg',
@@ -21,7 +21,7 @@ class HomeController extends GetxController {
       'title': 'Task Due Soon',
       'total': '8',
       'color': const Color(0xff353843),
-      'switch': true,
+      'switch': true.obs,
     },
     {
       'icons': 'assets/icons/ic_circle_check.svg',
@@ -29,7 +29,7 @@ class HomeController extends GetxController {
       'title': 'Completed',
       'total': '32',
       'color': AppColors.colorFul5,
-      'switch': true,
+      'switch': true.obs,
     },
     {
       'icons': 'assets/icons/ic_flag.svg',
@@ -37,40 +37,53 @@ class HomeController extends GetxController {
       'title': 'Working on',
       'total': '24',
       'color': const Color(0xff86FFCA),
-      'switch': true,
+      'switch': true.obs,
     },
   ];
   final lQuantity = [20, 10, 0];
   final lChart = <dynamic>[
     {
       'title': 'M',
-      'quantity': 19,
+      'project': 18,
+      'task': 11,
     },
     {
       'title': 'T',
-      'quantity': 8,
+      'project': 8,
+      'task': 6,
     },
     {
       'title': 'W',
-      'quantity': 11,
+      'project': 11,
+      'task': 8,
     },
     {
       'title': 'T',
-      'quantity': 20,
+      'project': 20,
+      'task': 15,
     },
     {
       'title': 'F',
-      'quantity': 10,
+      'project': 10,
+      'task': 8,
     },
     {
       'title': 'S',
-      'quantity': 4,
+      'project': 4,
+      'task': 2,
     },
     {
       'title': 'S',
-      'quantity': 2,
+      'project': 3,
+      'task': 1,
     },
   ];
+
+  void turnOfAllSwitch() {
+    for (var item in lOption) {
+      item['switch'].value = true;
+    }
+  }
 
   @override
   void onClose() {
