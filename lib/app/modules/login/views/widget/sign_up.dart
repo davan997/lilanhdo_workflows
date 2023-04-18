@@ -57,7 +57,9 @@ class SignUp extends StatelessWidget {
           onChanged: (d) {
             controller.contentName.value = d;
           },
-          decoration: inputDecoration(),
+          decoration: inputDecoration(
+            isBorderBottom: true
+          ),
         ),
         const SizedBox(height: 24),
         Text(
@@ -75,6 +77,7 @@ class SignUp extends StatelessWidget {
               controller.contentPassword.value = d;
             },
             decoration: inputDecoration(
+              isBorderBottom: true,
               suffixIcon: GestureDetector(
                 onTap: () {
                   controller.isShowPassword.value = !controller.isShowPassword.value;

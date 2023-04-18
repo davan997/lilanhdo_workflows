@@ -44,9 +44,11 @@ Widget defaultAppBar({bool leading = false, Function()? onTap, String? title, Li
   );
 }
 
-InputDecoration inputDecoration({Widget? suffixIcon, Widget? prefixIcon, double? sizeIcon}) {
+InputDecoration inputDecoration(
+    {Widget? suffixIcon, Widget? prefixIcon, double? sizeIcon, bool isBorderBottom = false}) {
   return InputDecoration(
     isDense: true,
+    contentPadding: const EdgeInsets.only(top: 3),
     focusColor: AppColors.colorFul5,
     prefixIconConstraints: BoxConstraints(
       minWidth: sizeIcon ?? 16,
@@ -58,11 +60,13 @@ InputDecoration inputDecoration({Widget? suffixIcon, Widget? prefixIcon, double?
     ),
     prefixIcon: prefixIcon,
     suffixIcon: suffixIcon,
-    enabledBorder: UnderlineInputBorder(
-      borderSide: BorderSide(color: AppColors.background2),
+    enabledBorder: const UnderlineInputBorder(
+      borderSide: BorderSide(color: Colors.transparent),
     ),
     focusedBorder: UnderlineInputBorder(
-      borderSide: BorderSide(color: AppColors.colorFul5),
+      borderSide: isBorderBottom != false
+          ? BorderSide(color: AppColors.colorFul5)
+          : const BorderSide(color: Colors.transparent),
     ),
   );
 }

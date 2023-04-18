@@ -62,6 +62,7 @@ class LogIn extends StatelessWidget {
               controller.contentPassword.value = d;
             },
             decoration: inputDecoration(
+              isBorderBottom: true,
               suffixIcon: GestureDetector(
                 onTap: () {
                   controller.isShowPassword.value = !controller.isShowPassword.value;

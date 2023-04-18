@@ -57,6 +57,7 @@ class EnterEmail extends StatelessWidget {
                   controller.contentEmail.value = d;
                 },
                 decoration: inputDecoration(
+                  isBorderBottom: true,
                   suffixIcon: Obx(
                     () => controller.contentEmail.value != ''
                         ? InkWell(
