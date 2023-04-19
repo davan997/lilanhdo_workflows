@@ -45,10 +45,15 @@ class SearchController extends GetxController {
       'complete': false,
       'color_date': AppColors.colorFul2,
     },
-  ];
+  ].obs;
+
+  void deleteTask(Map item) {
+    lData.remove(item);
+  }
 
   @override
   void onClose() {
+    lData.close();
     currentIndex.close();
     contentSearch.close();
     super.onClose();

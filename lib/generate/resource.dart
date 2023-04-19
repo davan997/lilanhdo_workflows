@@ -41,6 +41,10 @@ class R {
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_check.svg)
   static const String ASSETS_ICONS_IC_CHECK_SVG = 'assets/icons/ic_check.svg';
 
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_check_white.svg)
+  static const String ASSETS_ICONS_IC_CHECK_WHITE_SVG =
+      'assets/icons/ic_check_white.svg';
+
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_circle_check.svg)
   static const String ASSETS_ICONS_IC_CIRCLE_CHECK_SVG =
       'assets/icons/ic_circle_check.svg';
@@ -150,6 +154,18 @@ class R {
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_visible.svg)
   static const String ASSETS_ICONS_IC_VISIBLE_SVG =
       'assets/icons/ic_visible.svg';
+
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\images\avatar_1.png)
+  static const String ASSETS_IMAGES_AVATAR_1_PNG = 'assets/images/avatar_1.png';
+
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\images\avatar_2.png)
+  static const String ASSETS_IMAGES_AVATAR_2_PNG = 'assets/images/avatar_2.png';
+
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\images\avatar_3.png)
+  static const String ASSETS_IMAGES_AVATAR_3_PNG = 'assets/images/avatar_3.png';
+
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\images\avatar_4.png)
+  static const String ASSETS_IMAGES_AVATAR_4_PNG = 'assets/images/avatar_4.png';
 
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\images\avatar_default.png)
   static const String ASSETS_IMAGES_AVATAR_DEFAULT_PNG =

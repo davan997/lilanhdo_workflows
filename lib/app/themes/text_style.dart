@@ -31,6 +31,13 @@ class StyleText {
     color: Colors.white,
   );
 
+  static TextStyle inter13w600 = GoogleFonts.inter(
+    fontSize: 13,
+    fontWeight: FontWeight.w600,
+    height: 1.2,
+    color: Colors.white,
+  );
+
   static TextStyle inter13Bold = GoogleFonts.inter(
     fontSize: 13,
     fontWeight: FontWeight.bold,

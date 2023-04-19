@@ -31,6 +31,15 @@ class AppGradient {
       Color(0xff86FF99),
     ],
   );
+  static LinearGradient gradient_2 = const LinearGradient(
+    stops: [0, 1],
+    begin: Alignment.centerRight,
+    end: Alignment.centerLeft,
+    colors: [
+      Color(0xffC393FF),
+      Color(0xffE42A6C),
+    ],
+  );
   static LinearGradient gradient_3 = const LinearGradient(
     stops: [0, 1],
     begin: Alignment.centerRight,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
+import 'package:lilanhdo_workflows/app/modules/search/views/widget/task.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/style_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
@@ -133,54 +133,14 @@ class SearchView extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   Expanded(
-                    child: ListView(
-                      children: controller.lData.map(
-                        (d) {
-                          return Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 8),
-                            child: Slidable(
-                              endActionPane: ActionPane(
-                                motion: const ScrollMotion(),
-                                children: [
-                                  SlidableAction(
-                                    onPressed: (context) {},
-                                    backgroundColor: const Color(0xff86FFCA),
-                                    iconSVG: R.ASSETS_ICONS_IC_RESPOND_LEFT_SVG,
-                                  ),
-                                  SlidableAction(
-                                    onPressed: (context) {},
-                                    backgroundColor: AppColors.colorFul2,
-                                    iconSVG: R.ASSETS_ICONS_IC_BIN_SVG,
-                                  ),
-                                ],
-                              ),
-                              child: Container(
-                                padding: EdgeInsets.all(d['complete'] == false ? 20 : 19),
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(12),
-                                  border: d['complete'] == true ? Border.all(color: AppColors.background2) : null,
-                                  color: d['complete'] == false ? AppColors.background2 : AppColors.background,
-                                ),
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      height: 40,
-                                      width: 40,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: d['complete'] == false ? AppColors.background : AppColors.background2,
-                                      ),
-                                      child: Stack(
-                                        children: const [],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          );
-                        },
-                      ).toList(),
+                    child: Obx(
+                      () => ListView(
+                        children: controller.lData.map(
+                          (d) {
+                            return Task(item: d, controller: controller);
+                          },
+                        ).toList(),
+                      ),
                     ),
                   ),
                 ],

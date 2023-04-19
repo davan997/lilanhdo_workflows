@@ -22,7 +22,7 @@ class AppBarDefault extends StatelessWidget {
       margin: const EdgeInsets.only(top: 44),
       child: Row(
         children: [
-          if (leading! || leading != false)
+          if (leading != false)
             GestureDetector(
               behavior: HitTestBehavior.opaque,
               onTap: onTap ??
@@ -40,6 +40,7 @@ class AppBarDefault extends StatelessWidget {
                 child: SvgPicture.asset(R.ASSETS_ICONS_IC_ARROW_LEFT_SVG, fit: BoxFit.scaleDown),
               ),
             ),
+          if (leading == false && title != null && actions != null) const SizedBox(height: 26.67, width: 26.67),
           if (title != null)
             Expanded(
               child: Text(
@@ -49,7 +50,7 @@ class AppBarDefault extends StatelessWidget {
               ),
             ),
           if (actions != null)
-            leading == true
+            leading == true || (leading == false && title != null)
                 ? Row(children: actions ?? [])
                 : Expanded(
                     child: Row(children: actions ?? []),
