@@ -13,6 +13,11 @@ abstract class Routes {
   static const NOTIFICATION = _Paths.NOTIFICATION;
   static const LOGIN = _Paths.LOGIN;
   static const CREATE_WORKSPACE = _Paths.CREATE_WORKSPACE;
+  static const SET_ASSIGNEE = _Paths.SET_ASSIGNEE;
+  static const CREATE_TASK = _Paths.CREATE_TASK;
+  static const CREATE_PROJECT = _Paths.CREATE_PROJECT;
+  static const CREATE_TEAM = _Paths.CREATE_TEAM;
+  static const CREATE_EVENT = _Paths.CREATE_EVENT;
 }
 
 abstract class _Paths {
@@ -26,4 +31,9 @@ abstract class _Paths {
   static const NOTIFICATION = '/notification';
   static const LOGIN = '/login';
   static const CREATE_WORKSPACE = '/create-workspace';
+  static const SET_ASSIGNEE = '/set-assignee';
+  static const CREATE_TASK = '/create-task';
+  static const CREATE_PROJECT = '/create-project';
+  static const CREATE_TEAM = '/create-team';
+  static const CREATE_EVENT = '/create-event';
 }

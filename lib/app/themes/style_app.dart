@@ -44,24 +44,34 @@ Widget defaultAppBar({bool leading = false, Function()? onTap, String? title, Li
   );
 }
 
-InputDecoration inputDecoration(
-    {Widget? suffixIcon, Widget? prefixIcon, double? sizeIcon, bool isBorderBottom = false}) {
+InputDecoration inputDecoration({
+  Widget? suffixIcon,
+  Widget? prefixIcon,
+  double? sizePrefixIcon,
+  double? sizeSuffixIcon,
+  bool isBorderBottom = false,
+  String? hintText,
+}) {
   return InputDecoration(
-    isDense: true,
-    contentPadding: const EdgeInsets.only(top: 3),
+    isDense: isBorderBottom ? false : true,
+    hintText: hintText,
+    hintStyle: StyleText.poppins18w600.copyWith(color: AppColors.deActive),
+    contentPadding: isBorderBottom ? null : const EdgeInsets.only(top: 3),
     focusColor: AppColors.colorFul5,
     prefixIconConstraints: BoxConstraints(
-      minWidth: sizeIcon ?? 16,
-      minHeight: sizeIcon ?? 16,
+      minWidth: sizePrefixIcon ?? 16,
+      minHeight: sizePrefixIcon ?? 16,
     ),
     suffixIconConstraints: BoxConstraints(
-      minWidth: sizeIcon ?? 16,
-      minHeight: sizeIcon ?? 16,
+      minWidth: sizeSuffixIcon ?? 16,
+      minHeight: sizeSuffixIcon ?? 16,
     ),
     prefixIcon: prefixIcon,
     suffixIcon: suffixIcon,
-    enabledBorder: const UnderlineInputBorder(
-      borderSide: BorderSide(color: Colors.transparent),
+    enabledBorder: UnderlineInputBorder(
+      borderSide: isBorderBottom != false
+          ? BorderSide(color: AppColors.colorFul5)
+          : const BorderSide(color: Colors.transparent),
     ),
     focusedBorder: UnderlineInputBorder(
       borderSide: isBorderBottom != false

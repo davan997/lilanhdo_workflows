@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:lilanhdo_workflows/app/modules/home_all/home/controllers/home_controller.dart';
+import 'package:lilanhdo_workflows/app/modules/home_page/home/controllers/home_controller.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
 import 'package:lilanhdo_workflows/generate/resource.dart';

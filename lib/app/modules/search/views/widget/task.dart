@@ -27,14 +27,14 @@ class Task extends StatelessWidget {
             SlidableAction(
               onPressed: (context) {},
               backgroundColor: const Color(0xff86FFCA),
-              iconSVG: R.ASSETS_ICONS_IC_RESPOND_LEFT_SVG,
+              icon: Icons.delete_outlined,
             ),
             SlidableAction(
               onPressed: (context) {
                 controller.deleteTask(item);
               },
               backgroundColor: AppColors.colorFul2,
-              iconSVG: R.ASSETS_ICONS_IC_BIN_SVG,
+              icon: Icons.delete_outlined,
             ),
           ],
         ),

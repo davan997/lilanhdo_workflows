@@ -3,10 +3,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 import 'package:lilanhdo_workflows/app/component/app_bar_default.dart';
-import 'package:lilanhdo_workflows/app/modules/home_all/home/controllers/home_controller.dart';
-import 'package:lilanhdo_workflows/app/modules/home_all/home/views/widget/bs_filter_home.dart';
-import 'package:lilanhdo_workflows/app/modules/home_all/home/views/widget/overview.dart';
-import 'package:lilanhdo_workflows/app/modules/home_all/home/views/widget/productivity.dart';
+import 'package:lilanhdo_workflows/app/modules/home_page/home/controllers/home_controller.dart';
+import 'package:lilanhdo_workflows/app/modules/home_page/home/views/widget/overview/filter_overview.dart';
+import 'package:lilanhdo_workflows/app/modules/home_page/home/views/widget/overview/overview.dart';
+import 'package:lilanhdo_workflows/app/modules/home_page/home/views/widget/productivity/filter_productivity.dart';
+import 'package:lilanhdo_workflows/app/modules/home_page/home/views/widget/productivity/productivity.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
 import 'package:lilanhdo_workflows/generate/resource.dart';
@@ -106,11 +107,13 @@ class HomeView extends StatelessWidget {
                     const Spacer(),
                     GestureDetector(
                       onTap: () {
-                        showModalBottomSheet(
+                        showModalBottomSheet<Widget>(
                           backgroundColor: Colors.transparent,
                           context: context,
                           builder: (context) {
-                            return BSFilterHome(controller: controller);
+                            return controller.currentTab.value == 0
+                                ? FilterOverview(controller: controller)
+                                : FilterProductivity(controller: controller);
                           },
                         );
                       },

@@ -51,6 +51,12 @@ class StyleText {
     color: Colors.white,
   );
 
+  static TextStyle interW600 = GoogleFonts.inter(
+    fontWeight: FontWeight.w600,
+    height: 1.2,
+    color: Colors.white,
+  );
+
   static TextStyle interBold = GoogleFonts.inter(
     fontWeight: FontWeight.bold,
     height: 1.2,

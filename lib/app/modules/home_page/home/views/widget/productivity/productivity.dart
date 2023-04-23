@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:lilanhdo_workflows/app/modules/home_all/home/controllers/home_controller.dart';
+import 'package:lilanhdo_workflows/app/modules/home_page/home/controllers/home_controller.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
 
@@ -59,11 +59,11 @@ class Productivity extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(24),
                         color: AppColors.secondary,
-                        boxShadow: const [
+                        boxShadow: [
                           BoxShadow(
-                            offset: Offset(0, 8),
+                            offset: const Offset(0, 8),
                             blurRadius: 16,
-                            color: Color.fromRGBO(0, 0, 0, 0.5),
+                            color: Colors.black.withOpacity(0.5),
                           ),
                         ],
                       ),

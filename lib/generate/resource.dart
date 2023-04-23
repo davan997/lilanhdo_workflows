@@ -4,6 +4,10 @@
 class R {
   const R._();
 
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_add_task.svg)
+  static const String ASSETS_ICONS_IC_ADD_TASK_SVG =
+      'assets/icons/ic_add_task.svg';
+
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_angel_left.svg)
   static const String ASSETS_ICONS_IC_ANGEL_LEFT_SVG =
       'assets/icons/ic_angel_left.svg';
@@ -27,6 +31,14 @@ class R {
   static const String ASSETS_ICONS_IC_BOTTOM_NAVIGATOR_BAR_SVG =
       'assets/icons/ic_bottom_navigator_bar.svg';
 
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_calendar.svg)
+  static const String ASSETS_ICONS_IC_CALENDAR_SVG =
+      'assets/icons/ic_calendar.svg';
+
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_calendar_white.svg)
+  static const String ASSETS_ICONS_IC_CALENDAR_WHITE_SVG =
+      'assets/icons/ic_calendar_white.svg';
+
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_category.svg)
   static const String ASSETS_ICONS_IC_CATEGORY_SVG =
       'assets/icons/ic_category.svg';
@@ -40,6 +52,10 @@ class R {
 
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_check.svg)
   static const String ASSETS_ICONS_IC_CHECK_SVG = 'assets/icons/ic_check.svg';
+
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_check_list.svg)
+  static const String ASSETS_ICONS_IC_CHECK_LIST_SVG =
+      'assets/icons/ic_check_list.svg';
 
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_check_white.svg)
   static const String ASSETS_ICONS_IC_CHECK_WHITE_SVG =
@@ -72,6 +88,9 @@ class R {
   static const String ASSETS_ICONS_IC_DUCOMENT_PICKED_SVG =
       'assets/icons/ic_ducoment_picked.svg';
 
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_edit.svg)
+  static const String ASSETS_ICONS_IC_EDIT_SVG = 'assets/icons/ic_edit.svg';
+
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_fb.svg)
   static const String ASSETS_ICONS_IC_FB_SVG = 'assets/icons/ic_fb.svg';
 
@@ -80,6 +99,10 @@ class R {
 
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_flag.svg)
   static const String ASSETS_ICONS_IC_FLAG_SVG = 'assets/icons/ic_flag.svg';
+
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_flag_point.svg)
+  static const String ASSETS_ICONS_IC_FLAG_POINT_SVG =
+      'assets/icons/ic_flag_point.svg';
 
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_full_polygon.svg)
   static const String ASSETS_ICONS_IC_FULL_POLYGON_SVG =
@@ -98,6 +121,10 @@ class R {
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_half_polygon_right.svg)
   static const String ASSETS_ICONS_IC_HALF_POLYGON_RIGHT_SVG =
       'assets/icons/ic_half_polygon_right.svg';
+
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_image_stack.svg)
+  static const String ASSETS_ICONS_IC_IMAGE_STACK_SVG =
+      'assets/icons/ic_image_stack.svg';
 
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_mail.svg)
   static const String ASSETS_ICONS_IC_MAIL_SVG = 'assets/icons/ic_mail.svg';
@@ -118,8 +145,19 @@ class R {
   static const String ASSETS_ICONS_IC_NOTIFICATION_PICKED_SVG =
       'assets/icons/ic_notification_picked.svg';
 
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_pin.svg)
+  static const String ASSETS_ICONS_IC_PIN_SVG = 'assets/icons/ic_pin.svg';
+
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_plus.svg)
   static const String ASSETS_ICONS_IC_PLUS_SVG = 'assets/icons/ic_plus.svg';
+
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_project.svg)
+  static const String ASSETS_ICONS_IC_PROJECT_SVG =
+      'assets/icons/ic_project.svg';
+
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_project_two.svg)
+  static const String ASSETS_ICONS_IC_PROJECT_TWO_SVG =
+      'assets/icons/ic_project_two.svg';
 
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_respond_left.svg)
   static const String ASSETS_ICONS_IC_RESPOND_LEFT_SVG =
@@ -140,8 +178,18 @@ class R {
   static const String ASSETS_ICONS_IC_SEARCH_PICKED_SVG =
       'assets/icons/ic_search_picked.svg';
 
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_small_down_2.svg)
+  static const String ASSETS_ICONS_IC_SMALL_DOWN_2_SVG =
+      'assets/icons/ic_small_down_2.svg';
+
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_symbol.svg)
   static const String ASSETS_ICONS_IC_SYMBOL_SVG = 'assets/icons/ic_symbol.svg';
+
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_tag.svg)
+  static const String ASSETS_ICONS_IC_TAG_SVG = 'assets/icons/ic_tag.svg';
+
+  /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_team.svg)
+  static const String ASSETS_ICONS_IC_TEAM_SVG = 'assets/icons/ic_team.svg';
 
   /// ![preview](file://D:\Android_Studio\dart_native\lilanhdo_workflows\assets\icons\ic_unknown.svg)
   static const String ASSETS_ICONS_IC_UNKNOWN_SVG =

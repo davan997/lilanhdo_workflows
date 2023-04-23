@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lilanhdo_workflows/app/modules/home_page/create_event/views/create_event_view.dart';
+import 'package:lilanhdo_workflows/app/modules/home_page/create_project/views/create_project_view.dart';
+import 'package:lilanhdo_workflows/app/modules/home_page/create_task/views/create_task_view.dart';
+import 'package:lilanhdo_workflows/app/modules/home_page/create_team/views/create_team_view.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
+import 'package:lilanhdo_workflows/generate/resource.dart';
 
 class HomeController extends GetxController {
   final currentTab = 0.obs;
-  final lTab = ['Overview', 'Productivity'];
-  final lOption = <dynamic>[
+  final lTab = <String>['Overview', 'Productivity'];
+  final lOption = <Map<String, dynamic>>[
     {
       'image': 'assets/images/img_total_task.png',
       'icons': 'assets/icons/ic_circle_check_outline.svg',
@@ -41,7 +46,7 @@ class HomeController extends GetxController {
     },
   ];
   final lQuantity = [20, 10, 0];
-  final lChart = <dynamic>[
+  final lChart = <Map<String, dynamic>>[
     {
       'title': 'M',
       'project': 18,
@@ -78,11 +83,34 @@ class HomeController extends GetxController {
       'task': 1,
     },
   ];
+  final lCreate = <Map<String, dynamic>>[
+    {
+      'icon': R.ASSETS_ICONS_IC_ADD_TASK_SVG,
+      'title': 'Create Task',
+      'routes': const CreateTaskView(),
+    },
+    {
+      'icon': R.ASSETS_ICONS_IC_PROJECT_SVG,
+      'title': 'Create Project',
+      'routes': const CreateProjectView(),
+    },
+    {
+      'icon': R.ASSETS_ICONS_IC_TEAM_SVG,
+      'title': 'Create Team',
+      'routes': const CreateTeamView(),
+    },
+    {
+      'icon': R.ASSETS_ICONS_IC_CALENDAR_SVG,
+      'title': 'Create Event',
+      'routes': const CreateEventView(),
+    },
+  ];
 
-  void turnOfAllSwitch() {
+  void turnOnAllSwitch() {
     for (var item in lOption) {
       item['switch'].value = true;
     }
+    Get.back();
   }
 
   @override
