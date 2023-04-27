@@ -86,7 +86,9 @@ class OnboardingView extends GetView<OnboardingController> {
                     children: [
                       Expanded(
                         child: ButtonDefault(
-                          onPressed: () {},
+                          onPressed: () {
+                            controller.handleSignIn(true);
+                          },
                           isButtonBorder: true,
                           icon: R.ASSETS_ICONS_IC_GG_SVG,
                         ),
@@ -94,7 +96,9 @@ class OnboardingView extends GetView<OnboardingController> {
                       const SizedBox(width: 16),
                       Expanded(
                         child: ButtonDefault(
-                          onPressed: () {},
+                          onPressed: () {
+                            controller.handleSignIn(false);
+                          },
                           isButtonBorder: true,
                           icon: R.ASSETS_ICONS_IC_FB_SVG,
                         ),

@@ -27,6 +27,16 @@ dependencies:
   gradient_borders: ^1.0.0
   flutter_slidable: ^3.0.0
   dropdown_button2: ^2.1.0
+  flutterfire_cli: ^0.2.7
+  cloud_firestore: ^4.5.2
+  firebase_auth: ^4.2.2
+  firebase_core: ^2.10.0
+  permission_handler: ^10.2.0
+  sentry: ^7.5.0
+  firebase_messaging: ^14.4.1
+  firebase_in_app_messaging: ^0.7.1+1
+  flutter_screenutil: ^5.7.0
+  google_sign_in: ^6.1.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0

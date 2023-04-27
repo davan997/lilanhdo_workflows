@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "686651634286",
+    "firebase_url": "https://lilanhdo-workflows-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "lilanhdo-workflows",
+    "storage_bucket": "lilanhdo-workflows.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686651634286:android:0f273bac247478d83d2c7f",
+        "android_client_info": {
+          "package_name": "com.example.lilanhdo_workflows"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686651634286-3p87q17gr7d5hhepacbkugr46osc3mlt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA42_0ntje_NLgCHh47rS0HNt5ZEgjW2lk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686651634286-3p87q17gr7d5hhepacbkugr46osc3mlt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

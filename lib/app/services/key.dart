@@ -3,4 +3,5 @@
 class StorageKey {
   StorageKey._();
   static String LOG_IN = 'log_in';
+  static String ID_USER = 'info_user';
 }

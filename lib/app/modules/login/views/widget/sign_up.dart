@@ -52,14 +52,10 @@ class SignUp extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         TextFormField(
+          controller: controller.nameController,
           autovalidateMode: AutovalidateMode.always,
           style: StyleText.inter16w600,
-          onChanged: (d) {
-            controller.contentName.value = d;
-          },
-          decoration: inputDecoration(
-            isBorderBottom: true
-          ),
+          decoration: inputDecoration(isBorderBottom: true),
         ),
         const SizedBox(height: 24),
         Text(
@@ -91,7 +87,12 @@ class SignUp extends StatelessWidget {
         ),
         const SizedBox(height: 23),
         ButtonDefault(
-          onPressed: () {},
+          onPressed: () {
+            controller.signOrRegisterInWithEmailAndPassword(
+              fullName: controller.nameController.text,
+              password: controller.contentPassword.value,
+            );
+          },
           title: 'Sign Up',
         ),
       ],

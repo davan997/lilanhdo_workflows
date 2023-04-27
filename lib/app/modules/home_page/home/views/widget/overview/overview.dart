@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:lilanhdo_workflows/app/modules/home_page/home/controllers/home_controller.dart';
+import 'package:lilanhdo_workflows/app/services/key.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
 import 'package:lilanhdo_workflows/generate/resource.dart';
@@ -78,15 +80,20 @@ class Overview extends StatelessWidget {
                   children: [
                     Align(
                       alignment: Alignment.centerRight,
-                      child: Transform.rotate(
-                        angle: 18,
-                        child: Container(
-                          padding: const EdgeInsets.all(6),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: AppColors.primary,
+                      child: GestureDetector(
+                        onTap: () {
+                          print(GetStorage().read(StorageKey.LOG_IN).toString());
+                        },
+                        child: Transform.rotate(
+                          angle: 18,
+                          child: Container(
+                            padding: const EdgeInsets.all(6),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: AppColors.primary,
+                            ),
+                            child: SvgPicture.asset(R.ASSETS_ICONS_IC_PLUS_SVG),
                           ),
-                          child: SvgPicture.asset(R.ASSETS_ICONS_IC_PLUS_SVG),
                         ),
                       ),
                     ),

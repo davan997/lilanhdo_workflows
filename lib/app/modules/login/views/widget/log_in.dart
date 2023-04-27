@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:lilanhdo_workflows/app/component/button_default.dart';
 import 'package:lilanhdo_workflows/app/modules/login/controllers/login_controller.dart';
-import 'package:lilanhdo_workflows/app/routes/app_pages.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 import 'package:lilanhdo_workflows/app/themes/style_app.dart';
 import 'package:lilanhdo_workflows/app/themes/text_style.dart';
@@ -77,7 +76,7 @@ class LogIn extends StatelessWidget {
         const SizedBox(height: 23),
         ButtonDefault(
           onPressed: () {
-            Get.offAllNamed(Routes.CREATE_WORKSPACE);
+            controller.signOrRegisterInWithEmailAndPassword(password: controller.contentPassword.value);
           },
           title: 'Sign In',
         ),

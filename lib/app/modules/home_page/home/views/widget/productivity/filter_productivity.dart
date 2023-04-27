@@ -25,10 +25,7 @@ class FilterProductivity extends StatelessWidget {
               return GestureDetector(
                 onTap: () {
                   Get.back();
-                  Get.bottomSheet(
-                    d['routes']!,
-                    
-                  );
+                  Get.bottomSheet(d['routes']!);
                 },
                 child: Container(
                   padding: const EdgeInsets.all(20),

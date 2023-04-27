@@ -186,7 +186,9 @@ class CreateTaskView extends StatelessWidget {
                             final index = controller.lOption.indexOf(d);
                             return Padding(
                               padding: EdgeInsets.only(
-                                  left: index == 0 ? 0 : 16, right: index == controller.lOption.length - 1 ? 0 : 16),
+                                left: index == 0 ? 0 : 16,
+                                right: index == controller.lOption.length - 1 ? 0 : 16,
+                              ),
                               child: GestureDetector(
                                 onTap: () {
                                   d['function'];
