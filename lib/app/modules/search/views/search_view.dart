@@ -11,15 +11,15 @@ import 'package:lilanhdo_workflows/generate/resource.dart';
 import '../controllers/search_controller.dart';
 
 class SearchView extends StatelessWidget {
-  const SearchView({Key? key}) : super(key: key);
+  const SearchView({super.key});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
       },
-      child: GetBuilder<SearchController>(
-        init: SearchController(),
+      child: GetBuilder<SearchsController>(
+        init: SearchsController(),
         builder: (controller) {
           return Scaffold(
             backgroundColor: AppColors.background,

@@ -87,12 +87,7 @@ class SignUp extends StatelessWidget {
         ),
         const SizedBox(height: 23),
         ButtonDefault(
-          onPressed: () {
-            controller.signOrRegisterInWithEmailAndPassword(
-              fullName: controller.nameController.text,
-              password: controller.contentPassword.value,
-            );
-          },
+          onPressed: () {},
           title: 'Sign Up',
         ),
       ],

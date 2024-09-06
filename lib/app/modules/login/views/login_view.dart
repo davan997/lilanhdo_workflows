@@ -9,16 +9,14 @@ import 'package:lilanhdo_workflows/app/modules/login/views/widget/sign_up.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 
 class LoginView extends GetView<LoginController> {
-  const LoginView({Key? key}) : super(key: key);
+  const LoginView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,
-        onTap: () {
-          FocusScope.of(context).unfocus();
-        },
+        onTap: () => FocusScope.of(context).unfocus(),
         child: Column(
           children: [
             AppBarDefault(

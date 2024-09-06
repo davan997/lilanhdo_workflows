@@ -25,10 +25,7 @@ class AppBarDefault extends StatelessWidget {
           if (leading != false)
             GestureDetector(
               behavior: HitTestBehavior.opaque,
-              onTap: onTap ??
-                  () {
-                    Get.back();
-                  },
+              onTap: onTap ?? () => Get.back(),
               child: Container(
                 height: 26.67,
                 width: 26.67,
@@ -50,11 +47,7 @@ class AppBarDefault extends StatelessWidget {
               ),
             ),
           if (actions != null)
-            leading == true || (leading == false && title != null)
-                ? Row(children: actions ?? [])
-                : Expanded(
-                    child: Row(children: actions ?? []),
-                  ),
+            leading == true || (leading == false && title != null) ? Row(children: actions ?? []) : Expanded(child: Row(children: actions ?? [])),
         ],
       ),
     );

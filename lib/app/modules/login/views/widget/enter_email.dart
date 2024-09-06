@@ -73,9 +73,7 @@ class EnterEmail extends StatelessWidget {
               ),
               const SizedBox(height: 32),
               ButtonDefault(
-                onPressed: () {
-                  controller.changeRegisterOrLogin(email: controller.contentEmail.value);
-                },
+                onPressed: () {},
                 icon: R.ASSETS_ICONS_IC_MAIL_SVG,
                 title: 'Continue with Email',
               ),

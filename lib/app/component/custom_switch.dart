@@ -6,12 +6,7 @@ class CustomSwitch extends StatefulWidget {
   final Rx<bool> valuer;
   final bool? showBorder;
   final Function(bool)? onChanged;
-  const CustomSwitch({
-    required this.valuer,
-    this.showBorder = false,
-    super.key,
-    required this.onChanged,
-  });
+  const CustomSwitch({required this.valuer, this.showBorder = false, super.key, required this.onChanged});
 
   @override
   State<CustomSwitch> createState() => _CustomSwitchState();
@@ -29,28 +24,16 @@ class _CustomSwitchState extends State<CustomSwitch> {
         borderRadius: BorderRadius.circular(200),
         border: widget.showBorder!
             ? Border.all(
-                color: widget.valuer.value ? Colors.transparent : Colors.white.withOpacity(0.1),
+                color: widget.valuer.value ? Colors.transparent : Colors.white.withOpacity(.1),
               )
             : null,
       ),
       child: Switch(
         value: widget.valuer.value,
-        overlayColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
-          return Colors.transparent;
-        }),
-        trackColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
-          return Colors.transparent;
-        }),
-        thumbColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
-          return widget.valuer.value ? Colors.white : const Color(0xff4D5362);
-        }),
-        onChanged: (l) {
-          setState(
-            () {
-              widget.onChanged!(l);
-            },
-          );
-        },
+        overlayColor: WidgetStateProperty.resolveWith<Color>((Set<WidgetState> states) => Colors.transparent),
+        trackColor: WidgetStateProperty.resolveWith<Color>((Set<WidgetState> states) => Colors.transparent),
+        thumbColor: WidgetStateProperty.resolveWith<Color>((Set<WidgetState> states) => widget.valuer.value ? Colors.white : const Color(0xff4D5362)),
+        onChanged: (l) => setState(() => widget.onChanged!(l)),
       ),
     );
   }

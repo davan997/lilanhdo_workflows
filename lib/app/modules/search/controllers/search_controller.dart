@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lilanhdo_workflows/app/themes/color_app.dart';
 
-class SearchController extends GetxController {
+class SearchsController extends GetxController {
   final currentIndex = 0.obs;
   final lTab = ['Task', 'Mention', 'Files'];
   final controllerSearch = TextEditingController();

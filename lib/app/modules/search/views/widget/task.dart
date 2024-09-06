@@ -8,7 +8,7 @@ import 'package:lilanhdo_workflows/app/themes/text_style.dart';
 import 'package:lilanhdo_workflows/generate/resource.dart';
 
 class Task extends StatelessWidget {
-  final SearchController controller;
+  final SearchsController controller;
   final Map item;
   const Task({
     super.key,

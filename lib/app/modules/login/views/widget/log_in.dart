@@ -75,9 +75,7 @@ class LogIn extends StatelessWidget {
         ),
         const SizedBox(height: 23),
         ButtonDefault(
-          onPressed: () {
-            controller.signOrRegisterInWithEmailAndPassword(password: controller.contentPassword.value);
-          },
+          onPressed: () {},
           title: 'Sign In',
         ),
       ],
